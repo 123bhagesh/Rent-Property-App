@@ -1,0 +1,33 @@
+.Home{
+    color: aqua;
+}
+.Navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 70px;
+}
+.div1{
+    display: flex;
+    justify-content: center;
+    /* background-color: aqua; */
+    /* padding-right: 16px; */
+    font-size: 21px;
+    font-weight: 600;
+    gap:20px;
+    color: black;
+}
+.navlink{
+    text-decoration: none;
+    /* color: black; */
+}
+.SearchDiv{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 150px;
+    border: 1px solid red;
+}
+.SearchDiv>input{
+    width: 200px;
+    height: 20px;
+    margin-top: 30px;
+}
