@@ -15,20 +15,21 @@
 }
 .mainDiv>:nth-child(1){
   /* border: 1px solid red; */
-  width: 50%;
-  margin-left: 50px;
+  width: 650px;
+  margin-left: 20px;
 }
 .formDiv{
-    width:35%;
+    width:535px;
     height: 380px;
     border: 1px solid rgb(189, 187, 187);
-    margin: auto;
-    gap: 0 20px;
+    /* margin: auto; */
+    gap: 0 5px;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     text-align: left;
     padding: 20px;
-    margin-left: 0px;
+    
     border-radius: 5px;
     margin-top: 29px;
 }
@@ -91,4 +92,12 @@ input{
     /* background-color: #0e7e69; */
 }
 
-  
+@media screen and (min-width: 481px) and (max-width: 1268px) { 
+    /* STYLES HERE */
+    .mainDiv>:nth-child(1){
+        /* border: 1px solid red; */
+        display: none;
+        width: 50%;
+        margin-left: 50px;
+      }
+    }

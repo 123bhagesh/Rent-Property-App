@@ -141,9 +141,8 @@
     /* border: 2px solid blue; */
     padding-bottom: 50px;
     background-color: rgb(244, 249, 249);
-
-    
 }
+
 .fristDiv{
     /* text-align: center; */
     width: 330px;
@@ -197,4 +196,30 @@
 }
 .peginationDiv>h3{
     margin: 2px 10px;
+}
+
+@media screen and (min-width: 781px) and (max-width: 1268px) { 
+    /* STYLES HERE */
+    .filterDiv{
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        height: 50px;
+        /* background-color: aqua; */
+        margin: auto;
+        /* margin-top: 20px; */
+        margin-bottom: 40px;
+        padding: 0 20px;
+        padding-top: 15px;
+        /* border: 1px solid red; */
+        background-color: white;
+    }
+    .mapDiv{
+        width: 95%;
+        display: grid;
+        margin: auto;
+        grid-template-columns: repeat(2, auto);
+        justify-content: space-between;
+        row-gap: 50px;
+    }
 }
