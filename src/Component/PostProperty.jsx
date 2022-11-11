@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import Styles from './Style/Home.module.css'
 import estateryicon from './estatery-icon.PNG'
-import styles from './Style/AddProperty.module.css'
+import styles from './Style/PostProperty.module.css'
 import { Navbar } from './Navbar'
 import axios from 'axios'
 
-export const AddProperty = () => {
+export const PostProperty = () => {
   const [proptype, setProType] = useState('')
   const [name, setName] = useState('')
   const [image,setImage] = useState('')
