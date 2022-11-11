@@ -20,7 +20,7 @@
 }
 .formDiv{
     width:35%;
-    height: 360px;
+    height: 380px;
     border: 1px solid rgb(189, 187, 187);
     margin: auto;
     gap: 0 20px;
@@ -30,27 +30,29 @@
     padding: 20px;
     margin-left: 0px;
     border-radius: 5px;
-    /* padding-top: -20px; */
+    margin-top: 20px;
 }
 select{
     background-color: rgb(245, 255, 255);
     padding: 5px 10px;
-    font-weight: 600;
+    font-weight: 500;
     height: 34px;
     margin-right: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    font-size: 16px;
 }
 input{
     height: 27px;
     /* margin-right: 10px; */
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     width: 50%;
+    font-size: 16px;
 
 }
 .postButton{
-    width: 99.5%;
+    width: 99%;
     padding: 14px;
-    font-size: 18px;
+    font-size: 19px;
     font-weight: 700;
     background-color:  #09d2ad;
     color: white;
@@ -68,21 +70,25 @@ input{
 }
 .date{
    border: 1px solid black;
-   width: 135px;
+   width: 155px;
    height: 26px;
    display: flex;
-   padding-top: 5px;
-   padding-bottom: 0px;
+   padding: 3px;
+   /* padding-bottom: 0px; */
    padding-left: 9px;
-   font-size: 14px;
+   font-size: 16px;
    background-color: rgb(245, 255, 255);
-   font-weight: 600;
+   font-weight: 400;
 }
 .date>input{
    height: 100%;
    width: 10%;
    margin-left: 10px;
    border: none;
+}
+.area{
+    width: 200px;
+    /* background-color: #0e7e69; */
 }
 
   
