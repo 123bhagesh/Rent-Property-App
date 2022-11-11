@@ -10,13 +10,14 @@
 .Navbar{
     display: flex;
     justify-content: left;
-    padding: 20px 70px;
+    padding: 15px 60px;
+    padding-top: 35px;
     background-color: rgb(244, 249, 249);
-    border: 1px solid black;
+    border: 1px solid rgb(191, 190, 190);
     border-top: none;
     border-left: none;
     border-right: none;
-    
+
 
 }
 .div1{
@@ -118,11 +119,6 @@
     cursor: pointer;
     /* background-color: aqua; */
  }
- /* .area{
-     width: 200px;
-     background-color: #0e7e69;
- } */
-/* Add Property Page CSS */
 
 .formDiv{
     width: 400px;
@@ -135,11 +131,13 @@
    /* ////////////////////////// */
    /* Map data Css */
 .mapDiv{
+    width: 78%;
     display: grid;
+    margin: auto;
     grid-template-columns: repeat(3, auto);
-    justify-content: center;
+    justify-content: space-between;
     row-gap: 50px;
-    column-gap: 100px;
+    /* column-gap: 70px; */
     /* border: 2px solid blue; */
     padding-bottom: 50px;
     background-color: rgb(244, 249, 249);
@@ -154,10 +152,7 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 5px;
     background-color: white;
-    /* gap:20px; */
-    /* padding: 20px; */
 }
-
 .third{
     display: flex;
     width:100%;

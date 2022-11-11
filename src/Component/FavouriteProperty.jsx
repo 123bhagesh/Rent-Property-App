@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { NavLink, useAsyncError } from 'react-router-dom'
 import Styles from './Style/Home.module.css'
-import estateryicon from './estatery-icon.PNG'
 import { Navbar } from './Navbar'
 import axios from 'axios'
 import heartRed from "./Icons/heart.png"
@@ -9,44 +7,27 @@ import heartBlack from './Icons/love.png'
 
 export const FavouriteProperty = () => {
   const [data, setData] = useState([])
-  const [page, setPage] = useState(1)
-  const [date, setDate] = useState('')
-  const [minprice, setMinPrice] = useState()
-  const [maxprice, setMaxPrice] = useState()
-  const [city, setCity] = useState('')
-  const [propType, setPropType] = useState('')
-  const [data11, setData11] = useState([])
-  const [data22, setData22] = useState([])
-  const [data33, setData33] = useState(0)
-  let newData = []
-  let tempData
 
-  // console.log("Min Values", minprice,maxprice)
-  
-
-  const getData = (page)=>{
-     axios.get(`https://jsonserver-her-mock5.herokuapp.com/rent_property`)
+  const getData = ()=>{
+     axios.get(`https://jsonserver-her-mock5.herokuapp.com/wishlist`)
     .then((res)=> setData(res.data))
   }
 
   useEffect(()=>{
-     getData(page)
-  },[page])
+     getData()
+  },[])
   console.log(data)
-
-  let newData55 = data.filter((el)=> el.status == true)
-  
 
   return (
     <div style={{backgroundColor:"rgb(244, 249, 249)"}}>
       <Navbar/>
-      <div style={{marginTop:"70px"}}>
+      <div style={{marginTop:"40px"}}>
         <h1>Favourite Property</h1>
         {
-          newData55?
+          data?
           <div className={Styles.mapDiv} >
              {
-                  newData55?.map((el)=>(
+                  data?.map((el)=>(
                     // console.log(el.id)
                     // el.status == true 
                     <div key={el.id} className={Styles.fristDiv}>

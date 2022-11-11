@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
 import Styles from './Style/Home.module.css'
-import estateryicon from './estatery-icon.PNG'
 import styles from './Style/PostProperty.module.css'
 import { Navbar } from './Navbar'
 import axios from 'axios'

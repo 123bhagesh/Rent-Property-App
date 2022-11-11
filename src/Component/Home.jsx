@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { NavLink, useAsyncError } from 'react-router-dom'
 import Styles from './Style/Home.module.css'
-import estateryicon from './estatery-icon.PNG'
 import { Navbar } from './Navbar'
 import axios from 'axios'
 import heartRed from "./Icons/heart.png"
@@ -85,12 +83,10 @@ export const Home = () => {
    setData(price)
   }
   
-  const handleFavourite=(id)=>{
-      console.log("ID",id)
-      let payload={
-        "status": true
-      }
-      axios.patch(`https://jsonserver-her-mock5.herokuapp.com/rent_property/${id}`,payload)
+  const handleFavourite =(el)=>{
+    // console.log(el)
+    axios.post(`https://jsonserver-her-mock5.herokuapp.com/wishlist/`,el)
+
   }
   
   
@@ -149,7 +145,7 @@ export const Home = () => {
                                 <div style={{display:"flex",marginTop:"-15px"}}>
                                   <h3 style={{color:"#362aba",fontWeight:800}}>₹{el.rent} /</h3><h4 style={{marginTop:"21px"}}>month</h4>
                                 </div>
-                                <img style={{width:"25px",height:"25px"}} src={heartBlack} alt="" onClick={()=>handleFavourite(el.id)} />
+                                <img style={{width:"25px",height:"25px",cursor:"pointer"}} src={heartBlack} alt="" onClick={()=>handleFavourite(el)} />
                               </div>
                            </div>
                            <div className={Styles.fourth}>
