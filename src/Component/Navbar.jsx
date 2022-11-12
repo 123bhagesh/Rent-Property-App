@@ -1,5 +1,5 @@
 import React from 'react'
-import Styles from './Style/Home.module.css'
+import Styles from './Style/Navbar.module.css'
 import estateryicon from './Icons/estatery-icon.PNG'
 import { NavLink, useNavigate } from 'react-router-dom'
 

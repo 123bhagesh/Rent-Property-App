@@ -25,16 +25,18 @@ export const Home = () => {
   },[search])
   console.log(data)
   
+  // Type of City Filter Function--------------->
   const handleCity=(e)=>{
     let val = e.target.value
     console.log(data)    
     tempData = data.filter((el)=> el.city == val )
 
   }
-  // console.log("tempD",tempData)
 
+  // Date Filter Function------------------>
   const handleDate=(e)=>{
     let val = e.target.value
+    setDate(e.target.value)
     let ddd=[]
     console.log(tempData)
     if(tempData ){
@@ -62,6 +64,7 @@ export const Home = () => {
   }
   console.log("Data11",data11)
   
+  // Property Type Filter Function-------------->
   const handlePropertyType=(e)=>{
     let val = e.target.value
     console.log("11",data11)
@@ -71,6 +74,7 @@ export const Home = () => {
   }
   console.log("Data22",data22)
 
+  // Min and Max Price Filter Function------------>
   const handleFilter=()=>{
     // console.log(maxprice)
    let price = []
@@ -86,10 +90,9 @@ export const Home = () => {
   const handleFavourite =(el)=>{
     // console.log(el)
     axios.post(`https://jsonserver-her-mock5.herokuapp.com/wishlist/`,el)
-
   }
   
-  
+
   return (
     <div style={{backgroundColor:"rgb(244, 249, 249)"}}>
 
@@ -109,7 +112,7 @@ export const Home = () => {
        
         <div className={Styles.dateDiv}>
             {
-              date.length <= 0 ? "Select Move-in-Date" : date
+              date.length > 0 ? date : "Select Move-in-Date"
             } 
             <input type="date" data-date="" data-date-format="DD MMMM YYYY" onChange={handleDate}   min={Date.now()} max="2023-01-28" required/>
         </div>
@@ -173,7 +176,6 @@ export const Home = () => {
                  }
           </div>
           :
-          
           <div style={{paddingBottom:"50px"}}>
                <h1>Data Not Found</h1>
                <img src="https://img.freepik.com/free-vector/no-data-concept-illustration_114360-626.jpg?w=450" alt="dataNotFoundImg"/>
