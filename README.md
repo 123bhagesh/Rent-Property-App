@@ -1,12 +1,17 @@
 
 ## Estatery App
 
-Any one can check House, Apartment, Builder Floor in different cities. 
+Checkout rent property like House, Apartment, Builder Floor in different cities. 
 
-### Tec-Tack
+### Tech Stack:
 
 * React.JS
 * Html
 * Css
 * JavaScript
+
+### Features
+
+* Filter By City, Price Range, Property Type, Date wort together.
+* Search 
 
