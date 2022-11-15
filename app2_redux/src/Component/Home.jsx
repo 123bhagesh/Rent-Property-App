@@ -4,9 +4,14 @@ import { Navbar } from './Navbar'
 import axios from 'axios'
 import heartRed from "./Icons/heart.png"
 import heartBlack from './Icons/love.png'
+import { getData, getDataFun } from '../Redux/action'
+import { useDispatch, useSelector } from 'react-redux'
 
 export const Home = () => {
+
+  let dispatch = useDispatch()
   const [data, setData] = useState([])
+  var dataStore = useSelector((store)=> store.reducer.rent)
   const [search, setSearch] = useState('')
   const [date, setDate] = useState('')
   const [minprice, setMinPrice] = useState()
@@ -14,16 +19,21 @@ export const Home = () => {
   const [data11, setData11] = useState([])
   const [data22, setData22] = useState([])
   let tempData;
+  console.log("data1111Store",dataStore)
 
-  const getData = ()=>{
-     axios.get(`https://jsonserver-her-mock5.herokuapp.com/rent_property?q=${search}`)
-    .then((res)=> setData(res.data))
-  }
+  // const getData = ()=>{
+  //    axios.get(`https://jsonserver-her-mock5.herokuapp.com/rent_property?q=${search}`)
+  //   .then((res)=> setData(res.data))
+  // }
+  useEffect(()=>{
+   setData(dataStore)
+  },[dataStore])
+  console.log("DATA",data)
 
   useEffect(()=>{
-     getData(search)
+     dispatch(getDataFun(search))
   },[search])
-  console.log(data)
+  // console.log(data)
   
   // Type of City Filter Function--------------->
   const handleCity=(e)=>{
@@ -84,7 +94,9 @@ export const Home = () => {
         price.push(el)
       }
     })
-   setData(price)
+  //  setData(price)
+  console.log("Price",price)
+  dispatch(getData(price))
   }
   
   const handleFavourite =(el)=>{
@@ -181,7 +193,7 @@ export const Home = () => {
                <img src="https://img.freepik.com/free-vector/no-data-concept-illustration_114360-626.jpg?w=450" alt="dataNotFoundImg"/>
           </div>
         }
-      </div>
+      </div> 
     </div>
   )
 }
