@@ -16,7 +16,7 @@ export const FavouriteProperty = () => {
   useEffect(()=>{
      getData()
   },[])
-  console.log(data)
+  //console.log(data)
 
   return (
     <div style={{backgroundColor:"rgb(244, 249, 249)"}}>
