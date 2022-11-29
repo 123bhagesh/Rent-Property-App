@@ -5,7 +5,7 @@ Checkout rent property like House, Apartment, Builder Floor in different cities.
 
 ### Tech Stack:
 
-* React.JS
+* React.JS 
 * Html
 * Css
 * JavaScript
